@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class DigitSum {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int N = scanner.nextInt();
+        N = Math.abs(N);
+        int sum = 0;
+        int l = 0;
+        while (N != 0) {
+            l= N % 10;
+            sum += l;
+            N = N / 10;     
+        }
+        System.out.println(sum);
+
+        scanner.close();
+    }
+}

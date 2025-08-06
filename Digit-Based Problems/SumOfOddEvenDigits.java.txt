@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class SumOddEvenDigits {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int N = scanner.nextInt();
+        N = Math.abs(N);
+        int Sum1 = 0;
+        int Sum2 = 0;
+        while (N != 0) {
+            int l = N % 10;
+
+            if (l % 2 == 0) {
+                Sum1 += l;
+            } else {
+               Sum2 += l;
+            }
+
+            N = N / 10;
+        }
+
+        System.out.println(Sum2 + " " + Sum1);
+
+        scanner.close();
+    }
+}

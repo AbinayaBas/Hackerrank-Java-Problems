@@ -1,0 +1,26 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        int original = N;
+        int sum = 0;
+        int digits = 0;
+        int temp = N;
+        while (temp > 0) {
+            digits++;
+            temp /= 10;
+        }
+        while (N > 0) {
+            int digit = N % 10;
+            sum += Math.pow(digit, digits);
+            N /= 10;
+        }
+        if (sum == original) {
+            System.out.println("true");
+        } else {
+            System.out.println("false");
+        }
+    }
+}
